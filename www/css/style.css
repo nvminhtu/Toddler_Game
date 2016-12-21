@@ -1,0 +1,409 @@
+/* Empty. Add your own CSS if you like */
+
+/* Puzzle widgets */
+.puzzle-play {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+}
+.blurPic {
+   
+}
+.blurPic img {
+    width: 100%;
+    max-width: 400px;
+}
+.sliding-puzzle {
+    border: 1px solid #ccc;
+    border-spacing: 0;
+}
+.sliding-puzzle td {
+    border-collapse: collapse;
+    border: 2px outset white;
+    cursor: pointer;
+    padding: 0;
+}
+.sliding-puzzle .puzzle-empty {
+    border: none;
+    background-color: #534e4e !important;
+}
+.sliding-puzzle.puzzle-solved td {
+    border: none;
+}
+
+.word-search-puzzle {
+    border: 1px solid #999;
+}
+.word-search-puzzle td {
+    background-color: white;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.word-search-puzzle.puzzle-solved td {
+    background-color: #eee;
+}
+.word-search-puzzle td span {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.word-search-puzzle .puzzle-found {
+    background-color: #eee;
+}
+.word-search-puzzle .puzzle-selected {
+    background-color: #f5f5f5;
+}
+.word-search-puzzle .puzzle-message span {
+    background-color: #ffffcc;
+    color: red;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #444;
+}
+
+
+/* Application */
+
+#types {
+    margin: 0 0 40px 0px;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+#types li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 40px;
+}
+#types li a {
+    font-size: 22pt;
+    color: #999;
+}
+#types li.selected {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #999;
+    -webkit-box-shadow: 0 0 5px #999;
+    -moz-box-shadow: 0 0 5px #999;
+}
+#types li.selected a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#fork {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 149px;
+    height: 149px;
+    background: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png') no-repeat;
+}
+#powered {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    display: block;
+}
+#powered img {
+    opacity: 0.4;
+    width: 200px;
+}
+
+#sliding-advanced > div {
+    margin: 0px;
+    min-width: 300px;
+}
+#sliding-advanced .sliding-puzzle {
+    clear: both;
+    margin: 0 auto;
+}
+#sliding-advanced h2 {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+#sliding-advanced .status {
+    float: left;
+    width: 40%;
+    height: 50px;
+}
+#sliding-advanced .size {
+    text-align: center;
+    margin-top: 10px;
+}
+#sliding-advanced .src input {
+    width: 98%;
+    font-family: "Courier New";
+    margin-bottom: 4px;
+}
+
+#word-search {
+    position: relative;
+}
+#word-search .word-search-puzzle {
+    float: left;
+}
+#word-search .words {
+    list-style: none;
+    float: left;
+    margin: 4px 20px 0 0;
+}
+#word-search .words li {
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+#word-search .words .found {
+    color: #bbb;
+    text-decoration: line-through;
+    font-weight: normal
+}
+#word-search .status {
+    position: absolute;
+    left: 0;
+    top: 330px;
+    text-align: center;
+    width: 80px;
+    font-weight: bold;
+}
+.top-header {
+    margin-top: 50px;
+}
+.list img {
+    width: 100%;
+    height: auto;
+}
+/* Styling for screen */
+#finishscr {
+    display: none;
+}
+
+.bar.bar-header {
+    background: none;
+    border-bottom-width: 0px;
+}
+body, .ionic-body {
+    background: url(../img/bg-game.png) no-repeat #aa8560;
+    background-size: cover; 
+}
+.pane, .view {
+    background: none;
+}
+.bar,
+.bar .title {
+    height: 50px;
+}
+
+.button {
+    min-height: 50px;
+}
+
+
+.btngroup img {
+    width: 100%;
+}
+.bar-header .btngroup img {
+    width: 45px;
+}
+button.first {
+    float: left;
+}
+button.last {
+    float: right;
+}
+.bar-center {
+    width: 80%;
+    text-align: center;
+}
+.bar-center button {
+    margin: 0 auto;
+}
+[nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"] {
+    background-color: initial!important;
+}
+.size {
+    width: 100%;
+    overflow: hidden;
+}
+.wrap-left {
+    float: left;
+    width: 15%;
+}
+.wrap-right {
+    float: left;
+    width: 15%;
+}
+.wrap-center {
+    float: left;
+    width: 70%;
+    margin: 0 auto;
+}
+.make-left {
+    float: left;
+    width: 18%;
+}
+.make-right {
+    float: right;
+    width: 18%;
+}
+.make-center {
+    width: 64%;
+    float: left;
+    text-align: center;
+}
+.status-move {
+    background: #90d83c;
+    border: 5px solid #ffffff;
+    width: 100%;
+    color: #318c11;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    min-height: 40px;
+    line-height: 16px;
+}
+#view-reference img {
+    width: 100%;
+}
+#view-reference .size {
+    text-align: center;
+}
+#view-reference a {
+    display: block;
+}
+.btn-navi {
+    width: 50%;
+    margin: 0 auto;
+}
+.list .citem {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.list {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.list:last-child {
+    margin-bottom: 30px;
+}
+
+.modelPopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #9fdde8;
+    color: #996425;
+    font-weight: bold;
+    font-family: CarterOne;
+    font-size: 20px;
+    text-align: center;
+}
+.modelPopup p {
+    font-family: CarterOne;
+}
+.modelPopup .topHeading {
+    margin-top: -40px;
+}
+.modelPopup .cupInner {
+    width: 30%;
+    margin: 0 auto;
+}
+.modelPopup .topHeading img,
+.modelPopup .cupInner img {
+    width: 100%;
+}
+
+.innerPopup {
+    top: 8%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    background: #e7c986;
+    border: 4px solid #a37943;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.innerReferPopup {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    position: absolute;
+    background: #e7c986;
+    border: 4px solid #a37943;
+}
+.inner-opt {
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+.inner-opt li img {
+    width: 100%;
+    height: auto;
+}
+.inner-opt a {
+    display: block;
+}
+.wrap-opt {
+    text-align: center;
+}
+@font-face {
+  font-family: CarterOne;
+  src: url("../fonts/CarterOne.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+.popup-container .popup {
+    background-color: #e7c986; 
+    border: 4px solid #a37943;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+.popup-container .popup-head {
+    border-bottom: 0px;  
+}
+.popup-container .popup-title,
+.popup-container .popup-head, 
+.popup-container .popup {
+    color: #996425;
+    font-weight: bold;
+    font-family: CarterOne;
+    font-size: 20px;
+    text-align: center;
+}
+.popup-buttons {
+    background: url(../img/btn-ok.png) left center no-repeat;
+    padding: 30px 0;
+    text-indent: 200%
+    white-space: nowrap;
+    overflow: hidden;
+}
+.popup-buttons .button.button-positive {
+    background: none;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}

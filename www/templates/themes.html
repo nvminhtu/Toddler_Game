@@ -1,0 +1,142 @@
+<ion-view view-title="Themes">
+  <ion-content>
+    <ion-list>
+      <div class="row">
+        <div class="col">
+          <div class="btn-navi">
+            <a ui-sref="screenplay" ui-sref-opts="{reload: true}"><img src="img/btn-back.png"></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- list level - available or block -->
+      <div class="list" ng-switch="{{gotLevel}}">
+        <!-- -->
+        <ul ng-switch-when="1">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 5">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 5">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-when="2">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 5">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 5">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-when="3">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 5">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 5">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-when="4">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 5">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 5">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-when="5">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 6">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 6">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-when="6">
+          <div ng-repeat="level in levels">
+            <div ng-if="level.id >= 7">
+              <li class="citem">
+                <a ng-click="showAlert();">
+                  <img ng-src="{{level.lvpiclock}}">
+                </a>
+              </li>
+            </div>
+            <div ng-if="level.id < 7">
+              <li class="citem">
+                <a ng-click="setTheme(level.pic,level.id)">
+                  <img ng-src="{{level.lvpic}}">
+                </a>
+              </li>  
+            </div>
+          </div>
+        </ul>
+
+        <ul ng-switch-default>
+          <div ng-repeat="level in levels">
+            <li class="citem">
+              <a ng-click="setTheme(level.pic,level.id)">
+                <img ng-src="{{level.lvpic}}">
+              </a>
+            </li>
+          </div>
+        </ul>
+      <div>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

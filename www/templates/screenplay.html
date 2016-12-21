@@ -1,0 +1,66 @@
+<ion-view view-title="ScreenPlay">
+  	<ion-content>
+	 	<div id="sliding-advanced">
+			<div ng-repeat="puzzle in puzzles">
+				<!-- solved: <strong>{{puzzle.api.isSolved()}}</strong> -->
+				<!-- <button ng-click="puzzle.api.solve()">solve</button> -->
+				<div class="size">
+					<div class="wrap-left">
+						<button class="button button-icon icon btngroup" ng-click="puzzle.api.shuffle()"><img src="img/btn-replay.png"></button>	
+					</div>
+					<div class="wrap-center">
+						<button class="button status-move">Moves: <strong>{{puzzle.api.moves}}</strong></button>	
+					</div>
+					<div class="wrap-right">
+						<!-- <button  class="button button-icon icon btngroup" ui-sref="viewref" ui-sref-opts="{reload: true}"><img src="img/reference.png"></button>	 -->
+						<button  class="button button-icon icon btngroup" ng-click="openReference();"><img src="img/reference.png"></button>
+					</div>
+				</div>
+				<div class="puzzle-play">
+					<sliding-puzzle api="puzzle.api" size="{{puzzle.rows}}x{{puzzle.cols}}" src="{{theme}}"></sliding-puzzle>
+				</div>
+			</div>
+
+			
+		</div>
+	</ion-content>
+
+	<!-- start reference: modal popup -->
+	<div ng-show="isRefer">
+		<div id="view-reference" class="modelPopup">
+			<div class="innerReferPopup">
+				<img src="{{theme}}">	
+				<div class="size">
+					<div class="btn-navi">
+						<a ng-click="closeReference();"><img src="img/btn-back.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- end reference: modal popup -->
+
+	<!-- finish modal popup -->
+    <div id="finishscr" class="modelPopup">
+		<div class="innerPopup">
+			<div class="topHeading"><img src="img/congratulation.png"></div>
+			<p>You won level {{level}}! </p>
+			<div class="cupInner">
+				<img src="img/winner-cup.png">
+			</div>
+			<div class="cupGo">
+				<div ng-if="level < maxLevel">
+					<a ui-sref="screenplay" ui-sref-opts="{reload: true}"><img src="img/btn-replay-level.png"></a>
+					<a ng-click="setItemTheme(levels[level].pic, level)"><img src="img/btn-next-level.png"></a>
+				</div>
+				<div ng-if="level >= maxLevel">
+					<p>You won all levels.</p>
+					<p>Waiting for us, We will update more levels</p>
+					<a ui-sref="screenplay" ui-sref-opts="{reload: true}"><img src="img/btn-back.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modal popup -->
+
+</ion-view>

@@ -1,0 +1,14 @@
+<ion-view view-title="View Reference">
+  <ion-content>
+	<div id="view-reference">
+		<div class="size">
+			<div class="btn-navi">
+				<a ui-sref="screenplay" ui-sref-opts="{reload: true}"><img src="img/btn-back.png"></a>
+			</div>
+		</div>
+		<div ng-repeat="puzzle in puzzles">
+			<img src="{{theme}}">	
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
